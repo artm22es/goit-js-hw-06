@@ -6,12 +6,14 @@ function handlerSub(event) {
     event.preventDefault();
 
     const { email, password } = event.currentTarget.elements
-    
+    const obj = {
+        email : email.value,
+        password : password.value
+    }
     if (!email.value || !password.value) {
         alert("Заповніть всі поля!")
     } else {
-        console.log(email.value);
-        console.log(password.value);
+        console.log(obj);
         form.reset()
     }
 }

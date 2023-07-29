@@ -6,5 +6,9 @@ let outputName = document.querySelector('#name-output')
 inputName.addEventListener("input", handler)
 
 function handler(evt) {
-    outputName.textContent = evt.currentTarget.value
+    if (!evt.currentTarget.value) {
+        outputName.textContent = "Anonymous"
+    } else {
+        outputName.textContent = evt.currentTarget.value
+    }
 }
