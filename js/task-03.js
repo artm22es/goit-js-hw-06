@@ -24,8 +24,11 @@ function createMarkup(arr) {
   </li>`).join('')
 }
 
+
 gallery.style.listStyle = 'none'
-gallery.style.display = 'flex';
-gallery.style.flexWrap = 'wrap'
-gallery.style.gap = '20px'
+gallery.style.display = 'flex'
+gallery.style.flexDirection = 'column'
+gallery.style.gap = '10px'
+
+
 gallery.insertAdjacentHTML("beforeend", createMarkup(images))
